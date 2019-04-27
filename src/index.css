@@ -1,0 +1,477 @@
+
+@font-face {
+  font-family: Vazir;
+  src: url('../node_modules/vazir-font/dist/Vazir.eot');
+  src: url('../node_modules/vazir-font/dist/Vazir.eot?#iefix') format('embedded-opentype'),
+       url('../node_modules/vazir-font/dist/Vazir.woff2') format('woff2'),
+       url('../node_modules/vazir-font/dist/Vazir.woff') format('woff'),
+       url('../node_modules/vazir-font/dist/Vazir.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir;
+  src: url('../node_modules/vazir-font/dist/Vazir-Bold.eot');
+  src: url('../node_modules/vazir-font/dist/Vazir-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../node_modules/vazir-font/dist/Vazir-Bold.woff2') format('woff2'),
+       url('../node_modules/vazir-font/dist/Vazir-Bold.woff') format('woff'),
+       url('../node_modules/vazir-font/dist/Vazir-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir;
+  src: url('../node_modules/vazir-font/dist/Vazir-Black.eot');
+  src: url('../node_modules/vazir-font/dist/Vazir-Black.eot?#iefix') format('embedded-opentype'),
+       url('../node_modules/vazir-font/dist/Vazir-Black.woff2') format('woff2'),
+       url('../node_modules/vazir-font/dist/Vazir-Black.woff') format('woff'),
+       url('../node_modules/vazir-font/dist/Vazir-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir;
+  src: url('../node_modules/vazir-font/dist/Vazir-Medium.eot');
+  src: url('../node_modules/vazir-font/dist/Vazir-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../node_modules/vazir-font/dist/Vazir-Medium.woff2') format('woff2'),
+       url('../node_modules/vazir-font/dist/Vazir-Medium.woff') format('woff'),
+       url('../node_modules/vazir-font/dist/Vazir-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir;
+  src: url('../node_modules/vazir-font/dist/Vazir-Light.eot');
+  src: url('../node_modules/vazir-font/dist/Vazir-Light.eot?#iefix') format('embedded-opentype'),
+       url('../node_modules/vazir-font/dist/Vazir-Light.woff2') format('woff2'),
+       url('../node_modules/vazir-font/dist/Vazir-Light.woff') format('woff'),
+       url('../node_modules/vazir-font/dist/Vazir-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir;
+  src: url('../node_modules/vazir-font/dist/Vazir-Thin.eot');
+  src: url('../node_modules/vazir-font/dist/Vazir-Thin.eot?#iefix') format('embedded-opentype'),
+       url('../node_modules/vazir-font/dist/Vazir-Thin.woff2') format('woff2'),
+       url('../node_modules/vazir-font/dist/Vazir-Thin.woff') format('woff'),
+       url('../node_modules/vazir-font/dist/Vazir-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+body,
+html,
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'vazir', vazir, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  direction: rtl;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+  margin: 0;
+  padding: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+header {
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
+  text-align: right;
+  background: #4DB6AC;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .title {
+  margin: 0 20px;
+  height: 60px;
+  line-height: 60px;
+}
+
+header .title > h1 {
+  font-weight: 300;
+  color: #EEEEEE;
+  font-size: 14pt;
+}
+
+header .title > h1 > i {
+  margin: 0 5px;
+  font-weight: 400;
+  font-size: 22pt;
+}
+
+header .searchBox {
+  border: 1px solid rgba(0, 0, 0, .4);
+  padding: 3px 6px;
+  border-radius: 3px;
+  margin: 0 20px;
+}
+
+header .searchBox input {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+header .searchBox input::placeholder {
+  color: #EEEEEE
+}
+
+header .searchBox i {
+  cursor: pointer;
+  color: rgba(0, 0, 0, .4);
+}
+
+main {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* Styling Note Element */
+
+.noteElement {
+  padding: 10px;
+  margin: 10px 0;
+  background: rgba(250, 250, 250,.2);
+  border: 1px solid rgba(239, 235, 233, .6);
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba(150, 150, 150, 0.1),
+              0 6px 6px rgba(150, 150, 150, 0.13);
+}
+
+.noteElement > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 5px 15px 5px;
+}
+
+.noteElement > div > h4 {
+  width: 85%;
+  font-size: 14pt;
+  padding: 5px 10px;
+  background: #fff;
+  color: #616161;
+}
+
+.noteElement > div > div {
+  display: flex;
+  justify-content: flex-end;
+  width: 15%;
+}
+
+.noteElement > p {
+  color: #4A4A4A;
+  font-size: 17.6px;;
+  line-height: 2;
+  margin: 7px 10px 0px 10px;
+}
+
+.noteElement > div > div > i {
+  padding: 0 7px;
+  font-size: 10pt;
+  color: #A1887F;
+  cursor: pointer;
+}
+
+.noteElement > div > div > i:hover {
+  color: #795548;
+}
+
+.noteDate {
+  margin: 0 !important;
+  font-size: 8pt !important;
+  color: rgba(158, 158, 158,1.0);
+  text-align: left;
+  line-height: 10px !important;
+}
+
+
+/* Before Clicking */
+
+.before > button {
+  position: absolute;
+  bottom: 75px;
+  left: 80px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.before > button > i {
+  position: fixed;
+  font-size: 40pt;
+  color: #4DB6AC;
+}
+
+
+/* Styling Modal */
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modalContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 50%;
+  height: auto;
+  padding-bottom: 10px;
+  border-radius: 0.3rem;
+}
+
+.modalHeader {
+  position: relative;
+  top: 3px;
+  border-bottom: 2px solid #2196F3;
+  padding: 3px 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalHeader > h3 {
+  font-size: 11pt;
+  font-weight: 400;
+  color: rgba(97, 97, 97,1.0);
+  padding: 7px 0;
+}
+
+.modalHeader > h3 > i {
+  padding: 0 4px;
+  font-size: 14pt;
+}
+
+/* modal closing button */
+.modalHeader > i {
+  padding: 0 7px;
+  color: rgba(97, 97, 97,1.0);
+  cursor: pointer;
+}
+
+
+/* modal forms */
+.modalForm {
+  margin: 20px 20px 10px 20px;
+}
+
+.modalForm label {
+  display: block;
+  font-size: 10pt;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+.modalForm label > span {
+  color: red;
+  font-weight: 900;
+}
+
+.modalForm input[type = text] {
+  margin-top: 2px;
+  width: 50%;
+  min-width: 150px;
+  padding: 2px 7px;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  outline: none;
+}
+
+.modalForm textarea {
+  margin-top: 2px;
+  width: 100%;
+  height: 200px;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  padding: 7px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.selectColor {
+  display: flex;
+}
+
+.selectColor > button {
+  width: 30px;
+  height: 30px;
+  margin: 2px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.selectColor > button:disabled {
+  border: 1.5px solid black;
+}
+
+.selectColor button:nth-child(1) {
+  background: rgba(229, 57, 53,1.0);
+}
+
+.selectColor button:nth-child(2) {
+  background: rgba(30, 136, 229,1.0);
+}
+
+.selectColor button:nth-child(3) {
+  background: rgba(124, 179, 66,1.0);
+}
+
+.selectColor button:nth-child(4) {
+  background: rgba(255, 179, 0,1.0);
+}
+
+.modalForm > div:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalForm > div:last-child > p {
+  color: red;
+  font-size: 9pt;
+}
+
+.modalForm > div:last-child > button {
+  width: 100px;
+  height: 35px;
+  margin: 2px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: 500;
+  background: #F5F5F5;
+  color: rgba(97, 97, 97,1.0);
+}
+
+.modalForm > div:last-child > button:hover {
+  border: 1px solid rgba(0, 0, 0, .7);
+}
+
+.showModal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+/* Styling Intro */
+
+.introWrapper {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.introContainer {
+  width: 500px;
+  height: 250px;
+  background: #FAFAFA;
+  border-radius: 3px;
+  box-shadow: 0 10px 20px rgba(150, 150, 150, 0.1),
+              0 6px 6px rgba(150, 150, 150, 0.13);
+}
+
+.introContainer > h4 {
+  padding: 20px 10px;
+  color: #616161;
+}
+
+.introContainer > p {
+  line-height: 25pt;
+  padding: 0 20px;
+  font-size: 10pt;
+  display: flex;
+  align-items: center;
+}
+
+.introContainer > p > i {
+  color: #4DB6AC;
+  font-size: 13pt;
+  padding: 0 7px;
+}
+
+.introContainer > p > span {
+  height: 22px;
+  border-radius: 2px;
+  border: 1px solid rgb(98, 145, 44);
+  background: #ffffff;
+  padding: 0 5px;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+}
+
+.searchResult {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+  main {
+    width: 90%;
+  }
+
+  .modalContent {
+    width: 95%;
+  }
+}
+
+@media (max-width: 675px) {
+  header .title {
+    width: 60%;
+    margin: 0;
+    margin-right: 10px;
+  }
+  header .searchBox {
+    margin: 0 10px;
+  }
+
+  header .searchBox input {
+    width: 85%;
+  }
+
+  .noteElement > div > h4 {
+    font-size: 12pt;
+    padding: 5px;
+  }
+
+  .noteElement > p {
+    font-size: 11pt;
+  }
+}
